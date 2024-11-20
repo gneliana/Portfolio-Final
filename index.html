@@ -7,20 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Popup Container -->
-    <div id="videoPopup" class="popup" role="dialog" aria-label="Portfolio Video Walkthrough">
-        <div class="popup-content">
-            <span class="close-button" onclick="closePopup()" aria-label="Close video popup">&times;</span>
-            <iframe
-                src="https://www.veed.io/embed/fe5bff44-cc30-4577-8a98-58aa17636c18"
-                frameborder="0"
-                allow="autoplay; fullscreen"
-                allowfullscreen
-                class="video-iframe"
-                aria-label="Portfolio video"
-            ></iframe>
-        </div>
+<!-- Popup Container -->
+<div id="videoPopup" class="popup" role="dialog" aria-label="Portfolio Video Walkthrough">
+    <div class="popup-content">
+        <span class="close-button" onclick="closePopup()" aria-label="Close video popup">&times;</span>
+        <video class="video-player" controls autoplay>
+            <source src="assets/video/Portfolio Project Presentation-VEED.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+</div>
 
     <!-- Main Content -->
     <header class="header" role="banner">
