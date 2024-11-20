@@ -3,34 +3,34 @@ function closePopup() {
     const videoPopup = document.getElementById('videoPopup');
     const videoPlayer = videoPopup.querySelector('.video-player');
 
-    // Ensure the popup exists
     if (videoPopup) {
-        videoPopup.style.display = 'none'; // Hide the popup
+        // Hide the popup
+        videoPopup.style.display = 'none';
     } else {
         console.error('Popup element not found!');
     }
 
-    // Pause the video and reset it
     if (videoPlayer) {
-        videoPlayer.pause(); // Pause the video
-        videoPlayer.currentTime = 0; // Reset the video time to the start
+        // Pause the video and reset playback
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
     } else {
         console.error('Video player element not found!');
     }
 }
 
 // Ensure the popup is hidden on page load
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
     const videoPopup = document.getElementById('videoPopup');
     if (videoPopup) {
-        videoPopup.style.display = 'none'; // Ensure popup is hidden
+        videoPopup.style.display = 'none';
     }
-};
+});
 
 // Optional: Function to show the popup
 function showPopup() {
     const videoPopup = document.getElementById('videoPopup');
     if (videoPopup) {
-        videoPopup.style.display = 'flex'; // Display the popup
+        videoPopup.style.display = 'flex';
     }
 }
