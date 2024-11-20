@@ -23,244 +23,38 @@ body {
   background-color: var(--color-background);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-/* Header */
-.header {
-  background-color: var(--color-white);
-  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e5e8eb;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-unit);
-}
-
-.logo-image {
-  width: var(--spacing-unit);
-  height: var(--spacing-unit);
-  border-radius: 50%;
-}
-
-.brand-name {
-  font-size: 1.125rem;
-  font-weight: 700;
-}
-
-.nav-menu ul {
-  display: flex;
-  gap: calc(var(--spacing-unit) * 2);
-  list-style: none;
-}
-
-.nav-link {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 600;
-  padding: calc(var(--spacing-unit) * 0.5);
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--color-link);
-  text-decoration: underline;
-}
-
-/* Main Content */
-.main-content {
-  padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 10);
-}
-
-.content-wrapper {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-/* About Section */
-.profile-section {
-  display: flex;
-  gap: calc(var(--spacing-unit) * 2);
-  margin-bottom: calc(var(--spacing-unit) * 3);
-}
-
-.profile-image {
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: var(--border-radius);
-  object-fit: cover;
-}
-
-.profile-info {
-  flex: 1;
-}
-
-.profile-name {
-  font-size: 2rem;
-  margin-bottom: var(--spacing-unit);
-}
-
-/* Section Titles */
-.section-title {
-  font-size: 1.375rem;
-  margin: calc(var(--spacing-unit) * 2) 0 var(--spacing-unit);
-}
-
-/* Experience and Education Lists */
-.experience-list,
-.education-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-unit);
-}
-
-.experience-item,
-.education-item {
-  display: flex;
-  gap: var(--spacing-unit);
-  padding: calc(var(--spacing-unit) * 1.5);
-  background-color: var(--color-white);
-  border-radius: var(--border-radius);
-}
-
-.company-logo,
-.school-logo {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-}
-
-.experience-details,
-.education-details {
-  flex: 1;
-}
-
-.job-title,
-.school-name {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: calc(var(--spacing-unit) * 0.5);
-}
-
-.job-period,
-.education-info {
-  color: var(--color-secondary);
-  font-size: 0.875rem;
-  margin-bottom: calc(var(--spacing-unit) * 0.5);
-}
-
-.job-description {
-  color: var(--color-secondary);
-  list-style-position: inside;
-  padding-left: var(--spacing-unit);
-}
-
-/* Project Grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: calc(var(--spacing-unit) * 1.5);
-}
-
-.project-card {
-  background: var(--color-white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  padding: calc(var(--spacing-unit) * 1.5);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-}
-
-.project-image {
-  width: 100%;
-  border-radius: calc(var(--border-radius) * 0.25);
-  aspect-ratio: 2.1;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 1.5rem;
-  margin: var(--spacing-unit) 0;
-}
-
-.project-description,
-.project-tech {
-  margin-bottom: var(--spacing-unit);
-}
-
-.project-link {
-  display: flex;
-  align-items: center;
-  gap: calc(var(--spacing-unit) * 0.5);
-  color: var(--color-link);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.project-link:hover,
-.project-link:focus {
-  text-decoration: underline;
-}
-
-/* Popup Styles */
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
 }
 
-.popup.show {
-  visibility: visible;
-  opacity: 1;
-}
-
 .popup-content {
+  position: relative;
   background: var(--color-white);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  max-width: 900px;
   width: 90%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  max-width: 800px;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-unit);
+  box-shadow: var(--shadow);
 }
 
 .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 1.5rem;
   background: none;
   border: none;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: var(--color-primary);
 }
 
 .video-player {
@@ -268,55 +62,49 @@ body {
   border-radius: var(--border-radius);
 }
 
-/* Responsive Design */
-@media (max-width: 64rem) {
-  .header {
-      padding: var(--spacing-unit);
-  }
-
-  .main-content {
-      padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
-  }
-
-  .profile-section {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-  }
-
-  .nav-menu ul {
-      gap: var(--spacing-unit);
-  }
-
-  .experience-item,
-  .education-item {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-  }
-
-  .job-description {
-      text-align: left;
-  }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-unit);
+  margin-top: var(--spacing-unit);
 }
 
-@media (max-width: 48rem) {
-  .nav-menu {
-      display: none;
-  }
+.project-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-unit);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-      animation: none !important;
-      transition: none !important;
-  }
+.project-card:hover {
+  transform: translateY(-10px);
 }
 
-@media screen and (forced-colors: active) {
-  .project-card,
-  .experience-item,
-  .education-item {
-      border: 1px solid;
-  }
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin: var(--spacing-unit) 0;
+}
+
+.project-description {
+  font-size: 0.875rem;
+  color: var(--color-secondary);
+}
+
+.project-link {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  text-decoration: underline;
 }
