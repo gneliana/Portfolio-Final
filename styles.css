@@ -246,6 +246,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   color: #000;
+  z-index: 1001; /* Ensure close button is on top */
 }
 
 .video-player {

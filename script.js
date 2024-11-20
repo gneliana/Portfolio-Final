@@ -1,42 +1,33 @@
 // Function to close the popup and stop the video
 function closePopup() {
     const videoPopup = document.getElementById('videoPopup');
-    if (!videoPopup) {
-        console.error('Popup element not found!');
-        return;
-    }
-
     const videoPlayer = videoPopup.querySelector('.video-player');
-    if (!videoPlayer) {
-        console.error('Video player element not found!');
-        return;
+
+    if (videoPopup) {
+        videoPopup.style.display = 'none';
+    } else {
+        console.error('Popup element not found!');
     }
 
-    // Hide the popup
-    videoPopup.style.display = 'none';
-
-    // Pause the video and reset playback
-    videoPlayer.pause();
-    videoPlayer.currentTime = 0;
+    if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+    } else {
+        console.error('Video player element not found!');
+    }
 }
 
 // Function to show the popup
 function showPopup() {
     const videoPopup = document.getElementById('videoPopup');
-    if (!videoPopup) {
+    if (videoPopup) {
+        videoPopup.style.display = 'flex';
+    } else {
         console.error('Popup element not found!');
-        return;
     }
-
-    videoPopup.style.display = 'flex';
 }
 
 // Ensure the popup is displayed on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const videoPopup = document.getElementById('videoPopup');
-    if (videoPopup) {
-        showPopup(); // Show the popup when the page loads
-    } else {
-        console.error('Popup element not found on page load!');
-    }
+    showPopup(); // Show the popup on page load
 });
