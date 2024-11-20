@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Popup Container -->
-<div id="videoPopup" class="popup" role="dialog" aria-label="Portfolio Video Walkthrough">
-    <div class="popup-content">
-        <span class="close-button" onclick="closePopup()" aria-label="Close video popup">&times;</span>
-        <video class="video-player" controls autoplay>
-            <source src="assets/video/Portfolio Project Presentation-VEED.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- Popup Container -->
+    <div id="videoPopup" class="popup" role="dialog" aria-label="Portfolio Video Walkthrough">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()" aria-label="Close video popup">&times;</span>
+            <video class="video-player" controls autoplay>
+                <source src="assets/video/Portfolio Project Presentation-VEED.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
-</div>
 
     <!-- Main Content -->
     <header class="header" role="banner">
         <div class="logo-container">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/90d2be7262eca75889eec4e8466dd2ddcb853f42840b0949b91f8f2dee6928c0" alt="Portfolio logo" class="logo-image">
+            <img src="assets/icons/logo.png" alt="Portfolio logo" class="logo-image">
             <h1 class="brand-name">My Portfolio</h1>
         </div>
         <nav class="nav-menu" role="navigation" aria-label="Main navigation">
@@ -37,42 +37,10 @@
     <main class="main-content" role="main">
         <section id="about" class="profile-section" aria-labelledby="about-heading">
             <h2 id="about-heading" class="visually-hidden">About Me</h2>
-            <img src="assets/images/CSC299_bookshelf_LIudlpeLdr7YL1Nl.png" alt="Profile picture of Eliana Betancur" class="profile-image">
+            <img src="assets/images/profile.jpg" alt="Profile picture of Eliana Betancur" class="profile-image">
             <div class="profile-info">
                 <h2 class="profile-name">Hi, I'm Eliana Betancur</h2>
-                <p class="profile-description">A passionate Design System designer and UX Engineer specializing in creating intuitive, scalable solutions that bridge design and development...</p>
-            </div>
-        </section>
-
-        <section id="experience" aria-labelledby="experience-heading">
-            <h2 id="experience-heading" class="section-title">Professional Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <img src="assets/icons/work.png" alt="UnitedHealthcare logo" class="company-logo">
-                    <div class="experience-details">
-                        <h3 class="job-title">UnitedHealthcare – UX Engineer</h3>
-                        <p class="job-period">Mar 2023 – Present | Remote | Full-time</p>
-                        <ul class="job-description">
-                            <li>Spearhead the development and refinement of design systems</li>
-                            <li>Collaborate closely with cross-functional teams</li>
-                            <li>Optimize and maintain component libraries</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Additional experience items here -->
-            </div>
-        </section>
-
-        <section id="education" aria-labelledby="education-heading">
-            <h2 id="education-heading" class="section-title">Education</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <img src="assets/icons/school.png" alt="DePaul University logo" class="school-logo">
-                    <div class="education-details">
-                        <h3 class="school-name">DePaul University</h3>
-                        <p class="education-info">Bachelor of Science (BS), Computer Science<br>Concentration: Software Development<br>Minor: User Experience<br>Sep 2022 – Jun 2025</p>
-                    </div>
-                </div>
+                <p class="profile-description">A passionate Design System designer and UX Engineer specializing in creating intuitive, scalable solutions...</p>
             </div>
         </section>
 
@@ -80,12 +48,29 @@
             <h2 id="projects-heading" class="section-title">Projects</h2>
             <div class="project-grid">
                 <article class="project-card">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9261f2c1463555131232ca068bf1d9ab51ac759630013121d7d9e56e30831fca" alt="Recipe Share project screenshot" class="project-image">
+                    <img src="assets/images/project1.jpg" alt="Recipe Share project screenshot" class="project-image">
                     <h3 class="project-title">Recipe Share</h3>
-                    <p class="project-description">A user-friendly web application for storing and sharing recipes...</p>
+                    <p class="project-description">A web application for storing and sharing recipes...</p>
                     <a href="project1.html" class="project-link">Learn more</a>
                 </article>
-                <!-- Additional project cards here -->
+                <article class="project-card">
+                    <img src="assets/images/project2.jpg" alt="Merit Bank Services project screenshot" class="project-image">
+                    <h3 class="project-title">Merit Bank Services</h3>
+                    <p class="project-description">A collaborative banking application...</p>
+                    <a href="project2.html" class="project-link">Learn more</a>
+                </article>
+                <article class="project-card">
+                    <img src="assets/images/project3.jpg" alt="Form Exploration project screenshot" class="project-image">
+                    <h3 class="project-title">Form Exploration</h3>
+                    <p class="project-description">A creative form-based project showcasing user input...</p>
+                    <a href="project3.html" class="project-link">Learn more</a>
+                </article>
+                <article class="project-card">
+                    <img src="assets/images/project4.jpg" alt="Website Homepage project screenshot" class="project-image">
+                    <h3 class="project-title">Website Homepage</h3>
+                    <p class="project-description">A Figma-based project recreating a professional website homepage...</p>
+                    <a href="project4.html" class="project-link">Learn more</a>
+                </article>
             </div>
         </section>
     </main>

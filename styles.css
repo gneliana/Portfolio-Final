@@ -34,6 +34,7 @@ body {
   border: 0;
 }
 
+/* Header */
 .header {
   background-color: var(--color-white);
   padding: var(--spacing-unit) calc(var(--spacing-unit) * 2.5);
@@ -80,6 +81,7 @@ body {
   text-decoration: underline;
 }
 
+/* Main Content */
 .main-content {
   padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 10);
 }
@@ -89,6 +91,7 @@ body {
   margin: 0 auto;
 }
 
+/* About Section */
 .profile-section {
   display: flex;
   gap: calc(var(--spacing-unit) * 2);
@@ -111,11 +114,13 @@ body {
   margin-bottom: var(--spacing-unit);
 }
 
+/* Section Titles */
 .section-title {
   font-size: 1.375rem;
   margin: calc(var(--spacing-unit) * 2) 0 var(--spacing-unit);
 }
 
+/* Experience and Education Lists */
 .experience-list,
 .education-list {
   display: flex;
@@ -129,6 +134,7 @@ body {
   gap: var(--spacing-unit);
   padding: calc(var(--spacing-unit) * 1.5);
   background-color: var(--color-white);
+  border-radius: var(--border-radius);
 }
 
 .company-logo,
@@ -163,17 +169,18 @@ body {
   padding-left: var(--spacing-unit);
 }
 
+/* Project Grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: calc(var(--spacing-unit) * 1.5);
 }
 
 .project-card {
-  background-color: var(--color-white);
+  background: var(--color-white);
   border-radius: var(--border-radius);
-  padding: calc(var(--spacing-unit) * 1.5);
   box-shadow: var(--shadow);
+  padding: calc(var(--spacing-unit) * 1.5);
   transition: transform 0.3s ease;
 }
 
@@ -212,11 +219,56 @@ body {
   text-decoration: underline;
 }
 
-.link-icon {
-  width: 1.75rem;
-  height: 1.75rem;
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
 }
 
+.popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-content {
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video-player {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+/* Responsive Design */
 @media (max-width: 64rem) {
   .header {
       padding: var(--spacing-unit);
@@ -267,109 +319,4 @@ body {
   .education-item {
       border: 1px solid;
   }
-}
-/* Breadcrumb */
-.breadcrumb {
-  list-style: none;
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
-  color: var(--color-secondary);
-}
-
-.breadcrumb-link {
-  text-decoration: none;
-  color: var(--color-link);
-}
-
-.breadcrumb-link:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section */
-.project-hero {
-  margin-bottom: 2rem;
-}
-
-.hero-image {
-  width: 100%;
-  border-radius: var(--border-radius);
-  margin-bottom: 1rem;
-}
-
-.hero-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: var(--color-primary);
-}
-
-/* Section Styles */
-.section-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--color-primary);
-}
-
-.project-introduction p,
-.design-process p,
-.development-process p,
-.conclusion p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: var(--color-secondary);
-}
-
-ol {
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-ul {
-  margin-left: 1.5rem;
-  list-style-type: disc;
-  margin-bottom: 1rem;
-}
-/* Popup Styles */
-
-.popup-content {
-  position: relative;
-  width: 80%;
-  max-width: 900px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-}
-
-.popup-content {
-  position: relative;
-  width: 80%;
-  max-width: 900px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #000;
-}
-
-.video-player {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
 }
