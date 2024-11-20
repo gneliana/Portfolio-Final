@@ -20,17 +20,7 @@ function closePopup() {
     videoPlayer.currentTime = 0;
 }
 
-// Ensure the popup is hidden on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const videoPopup = document.getElementById('videoPopup');
-    if (videoPopup) {
-        videoPopup.style.display = 'none';
-    } else {
-        console.error('Popup element not found on page load!');
-    }
-});
-
-// Optional: Function to show the popup
+// Function to show the popup
 function showPopup() {
     const videoPopup = document.getElementById('videoPopup');
     if (!videoPopup) {
@@ -40,3 +30,13 @@ function showPopup() {
 
     videoPopup.style.display = 'flex';
 }
+
+// Ensure the popup is displayed on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const videoPopup = document.getElementById('videoPopup');
+    if (videoPopup) {
+        showPopup(); // Show the popup when the page loads
+    } else {
+        console.error('Popup element not found on page load!');
+    }
+});

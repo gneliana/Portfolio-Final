@@ -211,49 +211,47 @@ body {
 
 /* Popup Styles */
 .popup {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Ensures it appears above other content */
 }
 
 .popup-content {
-  background-color: var(--color-white);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-unit);
-  max-width: 90%;
-  box-shadow: var(--shadow);
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  width: 80%;
+  max-width: 900px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
 }
 
 .close-button {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1001;
+  top: 10px;
+  right: 10px;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  color: var(--color-primary);
+  color: #000;
 }
 
 .video-player {
   width: 100%;
-  max-height: 80vh;
-  border-radius: var(--border-radius);
-  z-index: 999;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* Responsive Adjustments */
